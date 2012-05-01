@@ -15,6 +15,10 @@ There should be some way to calculate weights from the connections. Probably the
 
 For a start, I think I can explore just a small section of wikipedia from the wikipedia [dumps][] or maybe [dbpedia]. There are lots of good ideias in an [article at hackdiary].
 
+Using the WikiMedia API
+-----------------------
+Listing the last 100 users that edited the page Physics: [http://en.wikipedia.org/w/api.php?action=query&prop=revisions&titles=Physics&rvprop=user&rvlimit=100]
+
 [wikiviz]: http://www.chrisharrison.net/projects/wikiviz/
 [dumps]: http://dumps.wikimedia.org/enwiki/
 [dbpedia]: http://dbpedia.org/About
