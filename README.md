@@ -20,4 +20,4 @@ For a start, I think I can explore just a small section of wikipedia from the wi
 [dbpedia]: http://dbpedia.org/About
 [article at hackdiary]: http://www.hackdiary.com/2012/04/05/extracting-a-social-graph-from-wikipedia-people-pages/
 [cluster the users]: http://jace.zaiki.in/files/2009/05/19/cis-wikipedia-report1.pdf
-[wikipedia editors]: http://www2012.org/proceedings/companion/p631.pdf
+[wikipedia editors]: http://ai.stanford.edu/~west1/pubs/wikiedits.pdf
