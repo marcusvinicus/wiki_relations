@@ -8,16 +8,22 @@ The first ideia is to do something similar to [wikiviz][], but with a different 
 
 The other one seems to be already developed. It consists to [cluster the users][] based on the pages edited by then. If two users edited the same page, they are, somehow, connected. The extension of the ideia is to build a social network around this concept. There is some study about [wikipedia editors][] and how they behave.
 
-Some details:
+Using the WikiMedia API
+-----------------------
+*   Listing the last 100 users that edited the page Physics: 
+    [http://en.wikipedia.org/w/api.php?action=query&prop=revisions&titles=Physics&rvprop=user&rvlimit=100]
+*   Link to the API Sandbox
+    [http://en.wikipedia.org/wiki/Special:ApiSandbox]
+
+
+                                                     ***
+
+Other details:
 -------------
 
 There should be some way to calculate weights from the connections. Probably there are users that edit lots of pages and users that edit just a few related pages.
 
-For a start, I think I can explore just a small section of wikipedia from the wikipedia [dumps][] or maybe [dbpedia]. There are lots of good ideias in an [article at hackdiary].
 
-Using the WikiMedia API
------------------------
-Listing the last 100 users that edited the page Physics: [http://en.wikipedia.org/w/api.php?action=query&prop=revisions&titles=Physics&rvprop=user&rvlimit=100]
 
 [wikiviz]: http://www.chrisharrison.net/projects/wikiviz/
 [dumps]: http://dumps.wikimedia.org/enwiki/
