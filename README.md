@@ -16,8 +16,6 @@ Using the WikiMedia API
     [http://en.wikipedia.org/wiki/Special:ApiSandbox]
 
 
-                                                     ***
-
 Other details:
 -------------
 
