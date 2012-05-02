@@ -14,6 +14,10 @@ Using the WikiMedia API
 
     [http://en.wikipedia.org/w/api.php?action=query&prop=revisions&titles=Physics&rvprop=user&rvlimit=100]
 
+*   Listing the last 100 users that edited the page with id 11723265 
+
+    [http://en.wikipedia.org/w/api.php?action=query&prop=revisions&pageids=11723265&rvprop=user&rvlimit=100]
+
 *   Listing the last 100 editions by user Filelakeshoe:
 
     [http://en.wikipedia.org//w/api.php?action=query&list=usercontribs&format=xml&uclimit=100&ucuser=Filelakeshoe]
