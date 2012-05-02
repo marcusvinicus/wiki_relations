@@ -15,12 +15,11 @@ class User:
 		self.pages = self.get_pages()
 
 	def __str__(self):
-		print self.login + ",", len(self.pages), "pages edited"
-		print "-"*60
+		result = (self.login + " has " + str(len(self.pages)) + " pages edited:\n")
+		pages = []
 		for page_id, page_title in self.pages.iteritems():
-			print page_title, "(" + page_id + ")"
-		print "-"*60
-		return ''
+			pages.append(' ' + page_title + " (" +  page_id + ")\n")
+		return result + ''.join(pages)
 
 	def get_pages(self):
 		pages = {}
