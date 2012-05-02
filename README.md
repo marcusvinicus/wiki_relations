@@ -10,9 +10,16 @@ The other one seems to be already developed. It consists to [cluster the users][
 
 Using the WikiMedia API
 -----------------------
-*   Listing the last 100 users that edited the page Physics: 
+*   Listing the last 100 users that edited the page Physics:
+
     [http://en.wikipedia.org/w/api.php?action=query&prop=revisions&titles=Physics&rvprop=user&rvlimit=100]
-*   Link to the API Sandbox
+
+*   Listing the last 100 editions by user Filelakeshoe:
+
+    [http://en.wikipedia.org//w/api.php?action=query&list=usercontribs&format=xml&uclimit=100&ucuser=Filelakeshoe]
+
+*   Link to the API Sandbox:
+
     [http://en.wikipedia.org/wiki/Special:ApiSandbox]
 
 
