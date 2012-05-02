@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# -*- coding: utf_8 -*-
 
 """
 This package shows that it is possible to connect wikipedians 
@@ -7,7 +8,7 @@ then based on interest areas.
 """
 
 WIKI_URL = "http://en.wikipedia.org/w/api.php?"
-API_CMD = "action=query&list=usercontribs&format=xml&uclimit=100&ucuser=%s"
+API_CMD = "action=query&list=usercontribs&format=xml&uclimit=500&ucuser=%s"
 
 class User:
 	def __init__(self, login):
@@ -15,11 +16,12 @@ class User:
 		self.pages = self.get_pages()
 
 	def __str__(self):
-		result = (self.login + " has " + str(len(self.pages)) + " pages edited:\n")
+		result = (self.login + " has edited " + str(len(self.pages)) + " pages.")
 		pages = []
 		for page_id, page_title in self.pages.iteritems():
 			pages.append(' ' + page_title + " (" +  page_id + ")\n")
-		return result + ''.join(pages)
+		result = result + ''.join(pages)
+		return result.encode('utf-8','replace')
 
 	def get_pages(self):
 		pages = {}
