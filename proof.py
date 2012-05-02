@@ -7,9 +7,14 @@ then based on interest areas.
 """
 
 WIKI_URL = "http://en.wikipedia.org/w/api.php?"
-API_CMD = "action=query&list=usercontribs&format=xml&uclimit=500&ucuser=%s"
+API_CMD = "action=query&list=usercontribs&format=json&uclimit=500&ucuser=%s"
+
+from sys import stdout
+from urllib import urlopen
+import json
 
 class User:
+	
 	def __init__(self, login):
 		self.login = login
 		url = ''.join([WIKI_URL, API_CMD]) % self.login
@@ -26,22 +31,19 @@ class User:
 		return result.encode('utf-8','replace')
 
 	def get_all_pages(self, url, url_continue=''):
-		
 		stdout.write('.')
 		stdout.flush()
 		pages = {}
-		dom = minidom.parse(urlopen(url+url_continue))
-		query = dom.getElementsByTagName('query').item(0)
-		usercontribs = query.getElementsByTagName('usercontribs').item(0)
-		for item in usercontribs.getElementsByTagName('item'):
-			page_id = item.getAttribute('pageid')
-			page_title = item.getAttribute('title')
+		data = json.load(urlopen(url+url_continue))
+		usercontribs = data['query']['usercontribs']
+		for contrib in usercontribs:
+			page_id = contrib['pageid']
+			page_title = contrib['title']
 			pages[page_id] = page_title
-		query_continue = dom.getElementsByTagName('query-continue').item(0)
-		if query_continue:
-			usercontribs = query_continue.getElementsByTagName('usercontribs').item(0)
-			ucstart = usercontribs.getAttribute('ucstart')
-			more_pages = self.get_all_pages(url,'&ucstart=%s' % ucstart)
+
+		if 'query-continue' in data:
+			ucstart = data['query-continue']['usercontribs']['ucstart']
+			more_pages = self.get_all_pages(url, '&ucstart=%s' % ucstart)
 			return dict(pages.items() + more_pages.items())
 		else:
 			print
@@ -61,8 +63,6 @@ def main():
 	filelakeshoe = User("Filelakeshoe")
 
 if __name__ == "__main__":
-	from urllib import urlopen
-	from xml.dom import minidom
-	from sys import stdout
+	
 	result = main()
 	exit(result)
