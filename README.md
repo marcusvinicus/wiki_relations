@@ -8,11 +8,14 @@ The ideia of connection by editions:
 
 Suppose there are three [wikipedians][]: Alice, Bob and Charles. Alice is mainly a content editor of Physics related pages. She has made editions to improve the quality of the [Mechanics][] and [Archimede's principle][] pages. Bob has done some research at college about Greek Culture and has contributed by editing the Archimede's principle and [Greece][] pages. Charles is only interested in History right now and has made changes in the Greece and [Archeology][] pages.
 
+![Alice, Bob and Charles' connections][graph]
+
 [wikipedians]: http://en.wikipedia.org/wiki/Wikipedia:Wikipedians
 [Mechanics]: http://en.wikipedia.org/wiki/Mechanics
 [Archimede's principle]: http://en.wikipedia.org/wiki/Archimedes%27_principle
 [Greece]: http://en.wikipedia.org/wiki/Greece
 [Archeology]: http://en.wikipedia.org/wiki/Archeology
+[graph]: graph.png
 
 Alice is connected to Bob through the Archimede's principle page. And Bob is connected to Charles through the Greece page. We can connect those people by interest using theirs editions. If two users edited the same page, they are, somehow, connected.
 
