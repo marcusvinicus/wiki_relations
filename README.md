@@ -27,8 +27,9 @@ There is a flaw in the example above. If Alice want to talk about mechanics, Bob
 
 The example given is a bit too simple to fully expose the concept. The truth is that there are lots of wikipedians and lots of pages edited by each one of them. This would result in a lot of users connected to Alice receiving the message. The concept of connection should be improved by adding some weight reflecting the interest level of the user over a content. This way, it is possible to sort users by connection strenght and a message created by Alice is shown only to just a few, minimizing the flaw.
 
-Collateral effects:
--------------------
+
+Effects of the ideia:
+---------------------
 
 There are some expected effects of a proper implementation of this ideia.
 
@@ -36,12 +37,16 @@ There are some expected effects of a proper implementation of this ideia.
 
 	This is basically the example given above. Alice's message is exposed only to a corpus of people that hopefully knows something about the subject. This way the others users are not cluttered with lots of messages that don't concern them.
 
-*   Clustering users around an expertise area
-
-	There is already some experiment around this ideia. It consists to [cluster the users][] based on the pages edited by then.
-
 *   Growth in the wikipedians population
 
 	This can be a two edged sword. Even so, it would be a good thing to increase the number of wikipedians by bringing new users and theirs different views about the world, a flood of new users can be quite daunting.
+
+*   Clustering users around an expertise area
+
+	There is already some experiment around this ideia. It consists to [cluster the users][] based on the pages edited by then. This could provide a easy way to find a corpus of specialists about an specific subject. 
+
+*   Connecting and clustering pages
+
+	 The same way people are connected through the pages they edit. Pages can be connected through editors. With this concept pages can be clustered around a bigger subject. The Mechanics and Archimede's principle can be grouped in a cluster of Physics related pages. This way, a user can receive suggestions on pages that he could contribute if he wishes.
 
 [cluster the users]: http://jace.zaiki.in/files/2009/05/19/cis-wikipedia-report1.pdf
