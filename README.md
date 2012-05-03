@@ -15,7 +15,7 @@ Suppose there are three [wikipedians][]: Alice, Bob and Charles. Alice is mainly
 [Archimede's principle]: http://en.wikipedia.org/wiki/Archimedes%27_principle
 [Greece]: http://en.wikipedia.org/wiki/Greece
 [Archeology]: http://en.wikipedia.org/wiki/Archeology
-[graph]: graph.png
+[graph]: wiki_relations/graph.png
 
 Alice is connected to Bob through the Archimede's principle page. And Bob is connected to Charles through the Greece page. We can connect those people by interest using theirs editions. If two users edited the same page, they are, somehow, connected.
 
